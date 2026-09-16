@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "vehicle",
+  "incident_date",
+  "incident_type",
+  "cb1",
+  "cit_trip",
+  "driver",
+  "location",
+  "third_party_involved",
+  "sb_det",
+  "description",
+  "police_report_no",
+  "cb_det",
+  "downtime_hours",
+  "repair_cost",
+  "sb_ins",
+  "insurance_claim_no",
+  "claim_status",
+  "claim_amount",
+  "settled_amount",
+  "cb_ins",
+  "cit_incident",
+  "status",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "VINC-.YYYY.-",
+   "reqd": 1,
+   "default": "VINC-.YYYY.-"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "incident_date",
+   "fieldtype": "Datetime",
+   "label": "Incident Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "label": "Incident Type",
+   "options": "Accident\nBreakdown\nTyre\nFire\nVandalism\nTheft",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cit_trip",
+   "fieldtype": "Link",
+   "label": "Cit Trip",
+   "options": "CIT Trip"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Employee",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "third_party_involved",
+   "fieldtype": "Check",
+   "label": "Third Party Involved"
+  },
+  {
+   "fieldname": "sb_det",
+   "fieldtype": "Section Break",
+   "label": "Detail",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "police_report_no",
+   "fieldtype": "Data",
+   "label": "Police Report No"
+  },
+  {
+   "fieldname": "cb_det",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "downtime_hours",
+   "fieldtype": "Float",
+   "label": "Downtime Hours"
+  },
+  {
+   "fieldname": "repair_cost",
+   "fieldtype": "Currency",
+   "label": "Repair Cost",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_ins",
+   "fieldtype": "Section Break",
+   "label": "Insurance",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "insurance_claim_no",
+   "fieldtype": "Data",
+   "label": "Insurance Claim No"
+  },
+  {
+   "fieldname": "claim_status",
+   "fieldtype": "Select",
+   "label": "Claim Status",
+   "options": "Not Claimed\nSubmitted\nUnder Review\nApproved\nSettled\nRejected",
+   "default": "Not Claimed",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "settled_amount",
+   "fieldtype": "Currency",
+   "label": "Settled Amount"
+  },
+  {
+   "fieldname": "cb_ins",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cit_incident",
+   "fieldtype": "Link",
+   "label": "Cit Incident",
+   "options": "CIT Incident",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nUnder Repair\nClosed",
+   "default": "Open",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Vehicle Incident",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Fleet",
+ "name": "Vehicle Incident",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "CIT Fleet Controller",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "autoname": "naming_series:"
+}
