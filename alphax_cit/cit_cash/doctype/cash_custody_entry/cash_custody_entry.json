@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "entry_datetime",
+  "cash_bag",
+  "amount",
+  "currency",
+  "cb1",
+  "seal_no",
+  "from_party_type",
+  "from_party",
+  "to_party_type",
+  "to_party",
+  "sb_ref",
+  "reference_doctype",
+  "reference_name",
+  "cit_trip",
+  "cb_ref",
+  "latitude",
+  "longitude",
+  "recorded_by",
+  "sb_chain",
+  "previous_entry",
+  "previous_hash",
+  "content_hash",
+  "is_reversal",
+  "reverses_entry",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CUST-.YYYY.-",
+   "reqd": 1,
+   "default": "CUST-.YYYY.-"
+  },
+  {
+   "fieldname": "entry_datetime",
+   "fieldtype": "Datetime",
+   "label": "Entry Datetime",
+   "reqd": 1,
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_bag",
+   "fieldtype": "Link",
+   "label": "Cash Bag",
+   "options": "Cash Bag",
+   "reqd": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_no",
+   "fieldtype": "Data",
+   "label": "Seal No",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "from_party_type",
+   "fieldtype": "Select",
+   "label": "From Party Type",
+   "options": "Customer\nEmployee\nVault\nBank",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "from_party",
+   "fieldtype": "Data",
+   "label": "From Party",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "to_party_type",
+   "fieldtype": "Select",
+   "label": "To Party Type",
+   "options": "Customer\nEmployee\nVault\nBank",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "to_party",
+   "fieldtype": "Data",
+   "label": "To Party",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_ref",
+   "fieldtype": "Section Break",
+   "label": "Reference",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "cit_trip",
+   "fieldtype": "Link",
+   "label": "Cit Trip",
+   "options": "CIT Trip",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ref",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_chain",
+   "fieldtype": "Section Break",
+   "label": "Tamper Evidence",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "previous_entry",
+   "fieldtype": "Link",
+   "label": "Previous Entry",
+   "options": "Cash Custody Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_hash",
+   "fieldtype": "Data",
+   "label": "Previous Hash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "content_hash",
+   "fieldtype": "Data",
+   "label": "Content Hash",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "is_reversal",
+   "fieldtype": "Check",
+   "label": "Is Reversal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reverses_entry",
+   "fieldtype": "Link",
+   "label": "Reverses Entry",
+   "options": "Cash Custody Entry"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Cash Custody Entry",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Cash",
+ "name": "Cash Custody Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "CIT Vault Controller",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Cash Counter",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "description": "Append-only chain of custody. Entries cannot be cancelled or deleted; post a reversal instead."
+}

@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "cit_trip",
+  "cit_job",
+  "customer_site",
+  "cb1",
+  "pod_type",
+  "pod_datetime",
+  "latitude",
+  "longitude",
+  "sb_sig",
+  "signatory_name",
+  "signatory_id",
+  "signatory_designation",
+  "cb_sig",
+  "signature",
+  "otp_verified",
+  "sb_bags",
+  "bags",
+  "total_declared",
+  "sb_photo",
+  "photos",
+  "remarks",
+  "sb_sys",
+  "captured_by",
+  "device_id",
+  "sync_event",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "POD-.YYYY.-",
+   "reqd": 1,
+   "default": "POD-.YYYY.-"
+  },
+  {
+   "fieldname": "cit_trip",
+   "fieldtype": "Link",
+   "label": "Cit Trip",
+   "options": "CIT Trip",
+   "reqd": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "cit_job",
+   "fieldtype": "Link",
+   "label": "Cit Job",
+   "options": "CIT Job",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_site",
+   "fieldtype": "Link",
+   "label": "Customer Site",
+   "options": "Customer Site",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pod_type",
+   "fieldtype": "Select",
+   "label": "Pod Type",
+   "options": "Collection\nDelivery",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pod_datetime",
+   "fieldtype": "Datetime",
+   "label": "Pod Datetime",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_sig",
+   "fieldtype": "Section Break",
+   "label": "Signatory",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "signatory_name",
+   "fieldtype": "Data",
+   "label": "Signatory Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "signatory_id",
+   "fieldtype": "Data",
+   "label": "Signatory ID"
+  },
+  {
+   "fieldname": "signatory_designation",
+   "fieldtype": "Data",
+   "label": "Signatory Designation"
+  },
+  {
+   "fieldname": "cb_sig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "otp_verified",
+   "fieldtype": "Check",
+   "label": "Otp Verified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_bags",
+   "fieldtype": "Section Break",
+   "label": "Bags",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "bags",
+   "fieldtype": "Table",
+   "label": "Bags",
+   "options": "CIT POD Bag"
+  },
+  {
+   "fieldname": "total_declared",
+   "fieldtype": "Currency",
+   "label": "Total Declared",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_photo",
+   "fieldtype": "Section Break",
+   "label": "Evidence",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Table",
+   "label": "Photos",
+   "options": "CIT POD Photo"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "sb_sys",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "captured_by",
+   "fieldtype": "Link",
+   "label": "Captured By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "label": "Device ID"
+  },
+  {
+   "fieldname": "sync_event",
+   "fieldtype": "Link",
+   "label": "Sync Event",
+   "options": "CIT Sync Event",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "CIT POD",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Operations",
+ "name": "CIT POD",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "CIT Dispatcher",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Control Room",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0
+}
