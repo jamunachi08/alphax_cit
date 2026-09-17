@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "crew_role",
+  "armed",
+  "licence_ok",
+  "clearance_ok"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "crew_role",
+   "fieldtype": "Select",
+   "label": "Crew Role",
+   "options": "Driver\nTeam Leader\nCustodian\nGuard",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "armed",
+   "fieldtype": "Check",
+   "label": "Armed",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "licence_ok",
+   "fieldtype": "Check",
+   "label": "Licence Ok",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clearance_ok",
+   "fieldtype": "Check",
+   "label": "Clearance Ok",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Operations",
+ "name": "CIT Trip Crew",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0
+}

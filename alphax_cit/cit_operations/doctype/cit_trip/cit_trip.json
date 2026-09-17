@@ -1,0 +1,328 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "trip_date",
+  "shift",
+  "vehicle",
+  "cb1",
+  "vault",
+  "route",
+  "planned_start",
+  "planned_end",
+  "sb_crew",
+  "crew",
+  "sb_stops",
+  "stops",
+  "sb_check",
+  "checklist_template",
+  "checklist",
+  "sb_odo",
+  "odometer_out",
+  "odometer_in",
+  "distance_km",
+  "cb_odo",
+  "fuel_issued_litres",
+  "actual_start",
+  "actual_end",
+  "sb_status",
+  "status",
+  "total_declared_value",
+  "cb_status",
+  "reconciliation_status",
+  "billing_status",
+  "dispatch_override_reason",
+  "dispatch_override_by",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CITT-.YYYY.-",
+   "reqd": 1,
+   "default": "CITT-.YYYY.-"
+  },
+  {
+   "fieldname": "trip_date",
+   "fieldtype": "Date",
+   "label": "Trip Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Morning\nAfternoon\nNight",
+   "default": "Morning",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vault",
+   "fieldtype": "Link",
+   "label": "Vault",
+   "options": "CIT Vault",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "planned_start",
+   "fieldtype": "Datetime",
+   "label": "Planned Start"
+  },
+  {
+   "fieldname": "planned_end",
+   "fieldtype": "Datetime",
+   "label": "Planned End"
+  },
+  {
+   "fieldname": "sb_crew",
+   "fieldtype": "Section Break",
+   "label": "Crew",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "crew",
+   "fieldtype": "Table",
+   "label": "Crew",
+   "options": "CIT Trip Crew",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_stops",
+   "fieldtype": "Section Break",
+   "label": "Stops",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "stops",
+   "fieldtype": "Table",
+   "label": "Stops",
+   "options": "CIT Trip Stop"
+  },
+  {
+   "fieldname": "sb_check",
+   "fieldtype": "Section Break",
+   "label": "Pre-Trip Check",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "checklist_template",
+   "fieldtype": "Link",
+   "label": "Checklist Template",
+   "options": "CIT Checklist Template"
+  },
+  {
+   "fieldname": "checklist",
+   "fieldtype": "Table",
+   "label": "Checklist",
+   "options": "CIT Trip Checklist Item"
+  },
+  {
+   "fieldname": "sb_odo",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Readings",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "odometer_out",
+   "fieldtype": "Float",
+   "label": "Odometer Out"
+  },
+  {
+   "fieldname": "odometer_in",
+   "fieldtype": "Float",
+   "label": "Odometer In"
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Float",
+   "label": "Distance Km",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_odo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fuel_issued_litres",
+   "fieldtype": "Float",
+   "label": "Fuel Issued Litres"
+  },
+  {
+   "fieldname": "actual_start",
+   "fieldtype": "Datetime",
+   "label": "Actual Start",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_end",
+   "fieldtype": "Datetime",
+   "label": "Actual End",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_status",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPlanned\nDispatched\nIn Transit\nReturned to Vault\nReconciled\nClosed\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "total_declared_value",
+   "fieldtype": "Currency",
+   "label": "Total Declared Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_status",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reconciliation_status",
+   "fieldtype": "Select",
+   "label": "Reconciliation Status",
+   "options": "Pending\nIn Progress\nBalanced\nVariance\nApproved",
+   "default": "Pending",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "billing_status",
+   "fieldtype": "Select",
+   "label": "Billing Status",
+   "options": "Not Billed\nHeld\nBilled",
+   "default": "Not Billed",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "dispatch_override_reason",
+   "fieldtype": "Small Text",
+   "label": "Dispatch Override Reason"
+  },
+  {
+   "fieldname": "dispatch_override_by",
+   "fieldtype": "Link",
+   "label": "Dispatch Override By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "CIT Trip",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Operations",
+ "name": "CIT Trip",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "CIT Dispatcher",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Control Room",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "search_fields": "vehicle,trip_date,status",
+ "autoname": "naming_series:"
+}
