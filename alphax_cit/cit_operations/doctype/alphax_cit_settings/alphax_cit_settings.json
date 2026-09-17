@@ -1,0 +1,349 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_gen",
+  "default_company",
+  "default_vault",
+  "default_currency",
+  "cb_gen",
+  "seal_prefix",
+  "enable_bilingual_labels",
+  "interface_direction",
+  "publish_journey_page",
+  "sb_disp",
+  "block_expired_vehicle_documents",
+  "block_expired_crew_documents",
+  "block_overlapping_assignment",
+  "cb_disp",
+  "minimum_rest_hours",
+  "minimum_crew_size",
+  "allow_dispatch_override",
+  "override_role",
+  "sb_cash",
+  "enable_hash_chain",
+  "discrepancy_expense_account",
+  "discrepancy_income_account",
+  "cb_cash",
+  "approval_thresholds",
+  "sb_alert",
+  "expiry_alert_days",
+  "prolonged_halt_minutes",
+  "speeding_threshold_kmh",
+  "cb_alert",
+  "default_geofence_radius",
+  "position_retention_days",
+  "sb_bill",
+  "hold_billing_on_discrepancy",
+  "discrepancy_hold_threshold",
+  "default_billing_item",
+  "sb_mobile",
+  "enable_mobile_api",
+  "auto_enrol_devices",
+  "minimum_app_version",
+  "cb_mobile",
+  "mobile_max_events_per_push",
+  "handset_position_beacon"
+ ],
+ "fields": [
+  {
+   "fieldname": "sb_gen",
+   "fieldtype": "Section Break",
+   "label": "General",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "default_company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_vault",
+   "fieldtype": "Link",
+   "label": "Default Vault",
+   "options": "CIT Vault"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "cb_gen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_prefix",
+   "fieldtype": "Data",
+   "label": "Seal Prefix",
+   "default": "SL"
+  },
+  {
+   "fieldname": "enable_bilingual_labels",
+   "fieldtype": "Check",
+   "label": "Enable Bilingual Labels",
+   "default": "1"
+  },
+  {
+   "fieldname": "interface_direction",
+   "fieldtype": "Select",
+   "label": "Interface Direction",
+   "options": "Automatic\nLeft to Right\nRight to Left",
+   "default": "Automatic",
+   "description": "Automatic follows each user's language. Force a direction when your team prefers left-to-right screens even while reading Arabic."
+  },
+  {
+   "fieldname": "publish_journey_page",
+   "fieldtype": "Check",
+   "label": "Publish Journey Page Publicly",
+   "default": "0",
+   "description": "Makes /cit-journey readable without a login, so the link can be sent to a customer."
+  },
+  {
+   "fieldname": "sb_disp",
+   "fieldtype": "Section Break",
+   "label": "Dispatch Controls",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "block_expired_vehicle_documents",
+   "fieldtype": "Check",
+   "label": "Block Expired Vehicle Documents",
+   "default": "1"
+  },
+  {
+   "fieldname": "block_expired_crew_documents",
+   "fieldtype": "Check",
+   "label": "Block Expired Crew Documents",
+   "default": "1"
+  },
+  {
+   "fieldname": "block_overlapping_assignment",
+   "fieldtype": "Check",
+   "label": "Block Overlapping Assignment",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_disp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_rest_hours",
+   "fieldtype": "Float",
+   "label": "Minimum Rest Hours",
+   "default": "8"
+  },
+  {
+   "fieldname": "minimum_crew_size",
+   "fieldtype": "Int",
+   "label": "Minimum Crew Size",
+   "default": "3"
+  },
+  {
+   "fieldname": "allow_dispatch_override",
+   "fieldtype": "Check",
+   "label": "Allow Dispatch Override",
+   "default": "1"
+  },
+  {
+   "fieldname": "override_role",
+   "fieldtype": "Link",
+   "label": "Override Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "sb_cash",
+   "fieldtype": "Section Break",
+   "label": "Cash Controls",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "enable_hash_chain",
+   "fieldtype": "Check",
+   "label": "Enable Hash Chain",
+   "default": "1"
+  },
+  {
+   "fieldname": "discrepancy_expense_account",
+   "fieldtype": "Link",
+   "label": "Discrepancy Expense Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "discrepancy_income_account",
+   "fieldtype": "Link",
+   "label": "Discrepancy Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cb_cash",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_thresholds",
+   "fieldtype": "Table",
+   "label": "Approval Thresholds",
+   "options": "CIT Approval Threshold"
+  },
+  {
+   "fieldname": "sb_alert",
+   "fieldtype": "Section Break",
+   "label": "Alerting",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "expiry_alert_days",
+   "fieldtype": "Data",
+   "label": "Expiry Alert Days",
+   "default": "90"
+  },
+  {
+   "fieldname": "prolonged_halt_minutes",
+   "fieldtype": "Int",
+   "label": "Prolonged Halt Minutes",
+   "default": "15"
+  },
+  {
+   "fieldname": "speeding_threshold_kmh",
+   "fieldtype": "Float",
+   "label": "Speeding Threshold Kmh",
+   "default": "120"
+  },
+  {
+   "fieldname": "cb_alert",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_geofence_radius",
+   "fieldtype": "Float",
+   "label": "Default Geofence Radius",
+   "default": "150"
+  },
+  {
+   "fieldname": "position_retention_days",
+   "fieldtype": "Int",
+   "label": "Position Retention Days",
+   "default": "180"
+  },
+  {
+   "fieldname": "sb_bill",
+   "fieldtype": "Section Break",
+   "label": "Billing",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "hold_billing_on_discrepancy",
+   "fieldtype": "Check",
+   "label": "Hold Billing On Discrepancy",
+   "default": "1"
+  },
+  {
+   "fieldname": "discrepancy_hold_threshold",
+   "fieldtype": "Currency",
+   "label": "Discrepancy Hold Threshold",
+   "default": "500"
+  },
+  {
+   "fieldname": "default_billing_item",
+   "fieldtype": "Link",
+   "label": "Default Billing Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "sb_mobile",
+   "fieldtype": "Section Break",
+   "label": "Mobile Crew Application"
+  },
+  {
+   "fieldname": "enable_mobile_api",
+   "fieldtype": "Check",
+   "label": "Enable Mobile API",
+   "default": "1",
+   "description": "Turns off every mobile endpoint at once. Use this to cut handset access during an incident."
+  },
+  {
+   "fieldname": "auto_enrol_devices",
+   "fieldtype": "Check",
+   "label": "Activate New Devices Automatically",
+   "default": "0",
+   "description": "Off by default. A new handset is registered inactive and must be enabled by a dispatcher before it can post."
+  },
+  {
+   "fieldname": "minimum_app_version",
+   "fieldtype": "Data",
+   "label": "Minimum App Version",
+   "default": "0.0.0"
+  },
+  {
+   "fieldname": "cb_mobile",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_max_events_per_push",
+   "fieldtype": "Int",
+   "label": "Maximum Events Per Push",
+   "default": "200"
+  },
+  {
+   "fieldname": "handset_position_beacon",
+   "fieldtype": "Check",
+   "label": "Accept Handset Position Beacon",
+   "default": "1",
+   "description": "Lets the crew app feed positions through the GPS pipeline when the vehicle tracker is offline."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-17 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CIT Operations",
+ "name": "AlphaX CIT Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0
+}

@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "bag_no",
+  "seal_no",
+  "customer",
+  "cit_job",
+  "cb1",
+  "declared_amount",
+  "currency",
+  "counted_amount",
+  "variance_amount",
+  "sb1",
+  "bag_status",
+  "current_custodian_type",
+  "current_custodian",
+  "cb2",
+  "seal_intact",
+  "counting_session",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "BAG-.YYYY.-",
+   "reqd": 1,
+   "default": "BAG-.YYYY.-"
+  },
+  {
+   "fieldname": "bag_no",
+   "fieldtype": "Data",
+   "label": "Bag No",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "seal_no",
+   "fieldtype": "Data",
+   "label": "Seal No",
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cit_job",
+   "fieldtype": "Link",
+   "label": "Cit Job",
+   "options": "CIT Job",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "declared_amount",
+   "fieldtype": "Currency",
+   "label": "Declared Amount",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "counted_amount",
+   "fieldtype": "Currency",
+   "label": "Counted Amount",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "variance_amount",
+   "fieldtype": "Currency",
+   "label": "Variance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bag_status",
+   "fieldtype": "Select",
+   "label": "Bag Status",
+   "options": "Created\nIn Transit\nAt Vault\nCounting\nCounted\nDeposited\nReturned\nLost",
+   "default": "Created",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "current_custodian_type",
+   "fieldtype": "Select",
+   "label": "Current Custodian Type",
+   "options": "Customer\nEmployee\nVault\nBank",
+   "default": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_custodian",
+   "fieldtype": "Data",
+   "label": "Current Custodian",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seal_intact",
+   "fieldtype": "Check",
+   "label": "Seal Intact",
+   "default": "1"
+  },
+  {
+   "fieldname": "counting_session",
+   "fieldtype": "Link",
+   "label": "Counting Session",
+   "options": "Counting Session",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Cash",
+ "name": "Cash Bag",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "CIT Vault Controller",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Cash Counter",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "autoname": "naming_series:"
+}

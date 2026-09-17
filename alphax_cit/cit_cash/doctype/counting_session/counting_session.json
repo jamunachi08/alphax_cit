@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "session_date",
+  "vault",
+  "cit_trip",
+  "cb1",
+  "counter",
+  "witness",
+  "started_at",
+  "ended_at",
+  "sb_bags",
+  "bags",
+  "sb_tot",
+  "total_declared",
+  "total_counted",
+  "cb_tot",
+  "total_variance",
+  "counterfeit_amount",
+  "damaged_amount",
+  "sb_st",
+  "status",
+  "company",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "COUNT-.YYYY.-",
+   "reqd": 1,
+   "default": "COUNT-.YYYY.-"
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "label": "Session Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "vault",
+   "fieldtype": "Link",
+   "label": "Vault",
+   "options": "CIT Vault",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cit_trip",
+   "fieldtype": "Link",
+   "label": "Cit Trip",
+   "options": "CIT Trip",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "counter",
+   "fieldtype": "Link",
+   "label": "Counter",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "witness",
+   "fieldtype": "Link",
+   "label": "Witness",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "started_at",
+   "fieldtype": "Datetime",
+   "label": "Started At"
+  },
+  {
+   "fieldname": "ended_at",
+   "fieldtype": "Datetime",
+   "label": "Ended At"
+  },
+  {
+   "fieldname": "sb_bags",
+   "fieldtype": "Section Break",
+   "label": "Bags Counted",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "bags",
+   "fieldtype": "Table",
+   "label": "Bags",
+   "options": "Counting Session Bag"
+  },
+  {
+   "fieldname": "sb_tot",
+   "fieldtype": "Section Break",
+   "label": "Totals",
+   "collapsible": 0
+  },
+  {
+   "fieldname": "total_declared",
+   "fieldtype": "Currency",
+   "label": "Total Declared",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "total_counted",
+   "fieldtype": "Currency",
+   "label": "Total Counted",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_tot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_variance",
+   "fieldtype": "Currency",
+   "label": "Total Variance",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "counterfeit_amount",
+   "fieldtype": "Currency",
+   "label": "Counterfeit Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "damaged_amount",
+   "fieldtype": "Currency",
+   "label": "Damaged Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_st",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nCounting\nBalanced\nVariance\nClosed",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Counting Session",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Cash",
+ "name": "Counting Session",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "CIT Vault Controller",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Cash Counter",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "submit": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "autoname": "naming_series:"
+}

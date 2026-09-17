@@ -1,0 +1,134 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head_include %}
+<style>
+:root{
+  --j-bg:#ffffff; --j-fg:#16202e; --j-muted:#5d6b7c; --j-line:#e3e8ef;
+  --j-card:#ffffff; --j-soft:#f6f8fb; --j-teal:#1F7A6C;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --j-bg:#11161d; --j-fg:#e7ecf3; --j-muted:#9aa8b8; --j-line:#26303c;
+    --j-card:#171d26; --j-soft:#1b222c; --j-teal:#5cc4ad;
+  }
+}
+:root[data-theme="dark"]{
+  --j-bg:#11161d; --j-fg:#e7ecf3; --j-muted:#9aa8b8; --j-line:#26303c;
+  --j-card:#171d26; --j-soft:#1b222c; --j-teal:#5cc4ad;
+}
+.j-wrap{max-width:900px;margin:0 auto;padding:36px 18px 72px;color:var(--j-fg);
+  line-height:1.6}
+.j-head{border-bottom:1px solid var(--j-line);padding-bottom:20px}
+.j-eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--j-muted);font-weight:700;margin-bottom:9px}
+.j-wrap h1{font-size:clamp(23px,4.2vw,32px);line-height:1.2;margin:0 0 9px;font-weight:650}
+.j-lede{font-size:15px;color:var(--j-muted);max-width:62ch;margin:0}
+.j-tools{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.j-tools a,.j-tools button{font-size:12.5px;padding:4px 12px;border-radius:14px;
+  border:1px solid var(--j-line);background:var(--j-card);color:var(--j-muted);
+  text-decoration:none;cursor:pointer}
+.j-phase{display:flex;align-items:center;gap:9px;margin:32px 0 13px}
+.j-dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+.j-phase-name{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.j-rule{flex:1 1 auto;height:1px;background:var(--j-line)}
+.j-step{display:flex;gap:15px}
+.j-rail{position:relative;flex:0 0 36px;display:flex;justify-content:center}
+.j-rail:before{content:"";position:absolute;top:36px;bottom:-8px;width:2px;
+  background:var(--j-line)}
+.j-step.j-last .j-rail:before{display:none}
+.j-num{width:32px;height:32px;border-radius:50%;color:#fff;font-weight:700;
+  font-size:13.5px;display:flex;align-items:center;justify-content:center;
+  flex:0 0 auto;z-index:1}
+.j-card{flex:1 1 auto;min-width:0;margin-bottom:15px;padding:15px 17px;
+  background:var(--j-card);border:1px solid var(--j-line);border-radius:10px}
+.j-card h2{font-size:16.5px;margin:0;font-weight:620}
+.j-alt{font-size:13.5px;color:var(--j-muted);display:block;margin-top:2px}
+.j-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.j-chip{font-size:11px;font-weight:600;padding:2px 9px;border-radius:11px;
+  background:var(--j-soft);color:var(--j-muted);white-space:nowrap}
+.j-what{margin:10px 0 0;font-size:14px}
+.j-guard{display:flex;gap:9px;align-items:flex-start;margin-top:11px;padding:10px 12px;
+  background:var(--j-soft);border-radius:7px;font-size:13px;color:var(--j-muted)}
+.j-tick{color:var(--j-teal);font-weight:800;flex:0 0 auto}
+.j-docs{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.j-doc{font-size:11.5px;padding:3px 10px;border-radius:13px;
+  border:1px solid var(--j-line);color:var(--j-muted);white-space:nowrap}
+.j-foot{margin-top:34px;padding-top:17px;border-top:1px solid var(--j-line);
+  font-size:12.5px;color:var(--j-muted)}
+[dir="rtl"] .j-card,[dir="rtl"] .j-guard{text-align:right}
+[dir="rtl"] .j-card{border-left:0!important;border-right:3px solid var(--accent)}
+.j-num,.j-chip{direction:ltr;unicode-bidi:isolate}
+@media print{.j-tools{display:none}.j-step{break-inside:avoid}}
+@media (max-width:600px){.j-rail{flex-basis:30px}.j-num{width:27px;height:27px}
+  .j-rail:before{top:31px}}
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="j-wrap" dir="{{ direction or 'ltr' }}">
+
+  <div class="j-head">
+    <div class="j-eyebrow">AlphaX CIT{% if company %} &middot; {{ company }}{% endif %}</div>
+    <h1>{{ title }}</h1>
+    {% if subtitle %}<p class="j-lede">{{ subtitle }}</p>{% endif %}
+    <div class="j-tools">
+      <a href="{{ lang_toggle }}">{{ lang_label }}</a>
+      <a href="{{ dir_toggle }}">{{ dir_label }}</a>
+      <button onclick="window.print()">{{ _("Print / Save as PDF") }}</button>
+      {% if frappe.session.user != "Guest" %}
+      <a href="/app/cit-flow">{{ _("Open in the system") }}</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if not phases %}
+    <p class="j-lede" style="margin-top:28px">
+      {{ _("The journey has not been set up yet. Run bench migrate to seed it.") }}
+    </p>
+  {% endif %}
+
+  {% for phase in phases %}
+    <div class="j-phase">
+      <i class="j-dot" style="background:{{ phase.colour }}"></i>
+      <span class="j-phase-name" style="color:{{ phase.colour }}">
+        {{ phase.name }}{% if phase.caption %} — {{ phase.caption }}{% endif %}
+      </span>
+      <span class="j-rule"></span>
+    </div>
+
+    {% for step in phase.steps %}
+    <div class="j-step {% if step.is_last %}j-last{% endif %}">
+      <div class="j-rail">
+        <div class="j-num" style="background:{{ step.colour }}">{{ step.sequence }}</div>
+      </div>
+      <div class="j-card" style="border-inline-start:3px solid {{ step.colour }};--accent:{{ step.colour }}">
+        <h2>{{ step.label }}</h2>
+        {% if step.label_alt %}<span class="j-alt">{{ step.label_alt }}</span>{% endif %}
+        <div class="j-meta">
+          {% if step.actor %}<span class="j-chip">{{ step.actor }}</span>{% endif %}
+          {% if step.duration %}<span class="j-chip">{{ step.duration }}</span>{% endif %}
+        </div>
+        {% if step.what %}<p class="j-what">{{ step.what }}</p>{% endif %}
+        {% if step.guarantee %}
+        <div class="j-guard"><span class="j-tick">&#10003;</span><span>{{ step.guarantee }}</span></div>
+        {% endif %}
+        {% if step.docs %}
+        <div class="j-docs">
+          {% for d in step.docs %}<span class="j-doc">{{ d.label }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  {% endfor %}
+
+  {% if phases %}
+  <div class="j-foot">
+    {{ _("{0} steps, one system. Every step above is a live screen — not a diagram.").format(step_count) }}
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}

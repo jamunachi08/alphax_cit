@@ -1,0 +1,796 @@
+A document type is required for a DocType node,نوع المستند مطلوب لعقدة من نوع مستند
+A driver must be assigned,يجب تعيين سائق
+A report name is required for a Report node,اسم التقرير مطلوب لعقدة من نوع تقرير
+A single register is limited to 5000 seals,السجل الواحد محدود بـ 5000 ختم
+A trip requires at least {0} crew members,تتطلب الرحلة {0} من أفراد الطاقم على الأقل
+ATM Replenishment,تغذية الصراف الآلي
+Access Protocol,بروتوكول الدخول
+Accident,حادث مروري
+Acknowledged,تم الإقرار
+Acknowledged By,تم الإقرار بواسطة
+Acknowledged On,تاريخ الإقرار
+Active,نشط
+Actual Arrival,الوصول الفعلي
+Actual Cost,التكلفة الفعلية
+Actual Departure,المغادرة الفعلية
+Actual End,النهاية الفعلية
+Actual Minutes,الدقائق الفعلية
+Actual Start,البداية الفعلية
+Ad Valorem,حسب القيمة
+Address,العنوان
+After Hours,خارج ساعات العمل
+Afternoon,بعد الظهر
+Age (days),العمر (أيام)
+Alert On Entry,تنبيه عند الدخول
+Alert On Exit,تنبيه عند الخروج
+Alert Time,وقت التنبيه
+Alert Type,نوع التنبيه
+Alerting,التنبيهات
+All checks passed. This trip may be dispatched.,اجتازت جميع الفحوصات. يمكن إرسال هذه الرحلة.
+Allow Dispatch Override,السماح بتجاوز بوابة الإرسال
+Allowed Roles,الصلاحيات المسموحة
+AlphaX CIT,أنظمة نقل الأموال
+AlphaX CIT Settings,إعدادات نقل الأموال
+AlphaX CIT document,مستند نقل الأموال
+Amended From,معدّل من
+Amount,المبلغ
+Amount From,المبلغ من
+Amount To,المبلغ إلى
+An override reason is required,سبب التجاوز مطلوب
+Android,أندرويد
+Api Key,مفتاح الواجهة
+App Version,إصدار التطبيق
+Applied,مطبّق
+Applied On,تاريخ التطبيق
+Applied To Stop,مطبق على المحطة
+Applies To,ينطبق على
+Approval Band,نطاق الاعتماد
+Approval Thresholds,حدود الاعتماد
+Approve,اعتماد
+Approve Discrepancy — {0},اعتماد الفرق — {0}
+Approved,معتمد
+Approved By,اعتُمد بواسطة
+Approved On,تاريخ الاعتماد
+Approver Role,صلاحية المعتمد
+Approver: {0},المعتمد: {0}
+Arabic / English content,المحتوى بالعربية / الإنجليزية
+Armed,مسلّح
+Armed Escort Required,يتطلب مرافقة مسلحة
+Armour Certificate,شهادة التدريع
+Armour Service,صيانة التدريع
+Arrival Window,نافذة الوصول
+Arrived,وصل
+Asset Maintenance Log,سجل صيانة الأصل
+At Vault,في الخزنة
+At least one tariff line is required,مطلوب بند تعرفة واحد على الأقل
+Attachment,المرفق
+Authorised Receivers,المخوّلون بالاستلام
+Authorised To Receive,مخوّل بالاستلام
+Auto Renew,تجديد تلقائي
+Automatic,تلقائي
+Automatic follows each user's language. Force a direction when your team prefers left-to-right screens even while reading Arabic.,«تلقائي» يتبع لغة كل مستخدم. اختر اتجاهاً ثابتاً إذا كان فريقك يفضل شاشات من اليسار إلى اليمين رغم القراءة بالعربية.
+Availability,الجاهزية
+Availability Status,حالة الجاهزية
+Bag No,رقم الكيس
+Bag Status,حالة الكيس
+Bags,الأكياس
+Bags Count,عدد الأكياس
+Bags Counted,الأكياس المعدودة
+Balanced,مطابق
+Band,النطاق
+Band Label,اسم النطاق
+Bank,البنك
+Bank Transaction,حركة بنكية
+Base Url,الرابط الأساسي
+Billable Lines,البنود القابلة للفوترة
+Billed,تمت الفوترة
+Billing,الفوترة
+Billing Frequency,دورية الفوترة
+Billing Item,صنف الفوترة
+Billing Status,حالة الفوترة
+Block Expired Crew Documents,منع الطاقم ذي الوثائق المنتهية
+Block Expired Vehicle Documents,منع المركبات ذات الوثائق المنتهية
+Block Overlapping Assignment,منع التعيين المتداخل
+Blocks Dispatch,يمنع الإرسال
+Branch,الفرع
+Breach Date,تاريخ المخالفة
+Breakdown,عطل
+Broken,مكسور
+CIT Alert,تنبيه نقل الأموال
+CIT Approval Threshold,حد الاعتماد
+CIT Auditor,المدقق
+CIT Billing Run,دورة الفوترة
+CIT Billing Run Line,بند دورة الفوترة
+CIT Cash Counter,عادّ النقد
+CIT Cash Discrepancy Ageing,أعمار الفروقات النقدية
+CIT Checklist Template,قالب قائمة الفحص
+CIT Checklist Template Item,بند قالب قائمة الفحص
+CIT Commercial Manager,المدير التجاري
+CIT Contract Site,موقع العقد
+CIT Control Room,غرفة التحكم
+CIT Crew,طاقم ميداني
+CIT Denomination Count,عد الفئات النقدية
+CIT Device,جهاز الطاقم
+CIT Discrepancy,فرق نقدي
+CIT Dispatcher,مسؤول الإرسال
+CIT Finance,المالية
+CIT Fleet Compliance Cockpit,لوحة امتثال الأسطول
+CIT Fleet Controller,مراقب الأسطول
+CIT Fuel Entry,قيد وقود
+CIT Incident,حادثة
+CIT Job,طلب خدمة
+CIT Journey,رحلة نقل الأموال
+CIT Maintenance Request,طلب صيانة
+CIT Manager,مدير نقل الأموال
+CIT Node Role,صلاحية العقدة
+CIT POD,إثبات التسليم
+CIT POD Bag,كيس إثبات التسليم
+CIT POD Photo,صورة إثبات التسليم
+CIT Process Flow,خريطة العملية
+CIT Process Node,عقدة العملية
+CIT Process Stage,مرحلة العملية
+CIT SLA Breach,مخالفة مستوى الخدمة
+CIT SLA Target,هدف مستوى الخدمة
+CIT Service Contract,عقد الخدمة
+CIT Service Type,نوع الخدمة
+CIT Site Contact,جهة اتصال الموقع
+CIT Sync Event,حدث المزامنة
+CIT Tariff Line,بند التعرفة
+CIT Trip,رحلة
+CIT Trip Checklist Item,بند فحص الرحلة
+CIT Trip Crew,طاقم الرحلة
+CIT Trip Performance,أداء الرحلات
+CIT Trip Stop,محطة الرحلة
+CIT Vault,الخزنة
+CIT Vault Controller,مراقب الخزنة
+CIT discrepancy {0} ({1}),فرق نقدي {0} ({1})
+Calendar,التقويم
+Cancel the trip {0} before cancelling this job,ألغِ الرحلة {0} قبل إلغاء هذا الطلب
+Cancelled,ملغى
+Cannot move a trip from {0} to {1},لا يمكن نقل الرحلة من {0} إلى {1}
+Caption,الوصف
+Captured By,سُجّل بواسطة
+Cash & Vault,النقد والخزنة
+Cash Account,حساب النقد
+Cash Bag,كيس نقدي
+Cash Controls,ضوابط النقد
+Cash Custody Entry,قيد العهدة
+Cash in Transit,نقل الأموال
+Chain broken at {0} after {1} entries.,انقطعت السلسلة عند {0} بعد {1} قيداً.
+Chain of Custody,سلسلة العهدة
+Charge Basis,أساس التسعير
+Check Dispatch,فحص الإرسال
+Checked,تم الفحص
+Checklist,قائمة الفحص
+Checklist Template,قالب قائمة الفحص
+Circle,دائرة
+Cit Incident,الحادثة
+Cit Job,طلب الخدمة
+Cit Trip,الرحلة
+City,المدينة
+Claim Amount,مبلغ المطالبة
+Claim Status,حالة المطالبة
+Clearance Ok,التصريح سارٍ
+Client Event ID,معرّف حدث الجهاز
+Closed,مغلق
+Closed On,تاريخ الإغلاق
+Closing odometer cannot be lower than the opening odometer,قراءة العداد عند العودة لا يمكن أن تقل عن قراءته عند الخروج
+Coin,معدنية
+Collection,استلام
+Colour,اللون
+Commercial,تجاري
+Company,الشركة
+Completed,مكتمل
+Completed On,تاريخ الإنجاز
+Contact Name,اسم جهة الاتصال
+Contacts,جهات الاتصال
+Content Hash,بصمة المحتوى
+Contract,العقد
+Contract Reference,مرجع العقد
+Contract end date cannot precede the start date,تاريخ انتهاء العقد لا يمكن أن يسبق تاريخ بدايته
+Contract {0} does not belong to customer {1},العقد {0} لا يخص العميل {1}
+Contract {0} for {1} expires in {2} days,العقد {0} للعميل {1} ينتهي خلال {2} يوماً
+Contract {0} is not active,العقد {0} غير نشط
+Corrective,تصحيحية
+Corrective Action,الإجراء التصحيحي
+Counted,تم العد
+Counted Amount,المبلغ المعدود
+Counter,العادّ
+Counterfeit,عملة مزيّفة
+Counterfeit Amount,مبلغ العملة المزيّفة
+Counting,جاري العد
+Counting Session,جلسة العد
+Counting Session Bag,كيس جلسة العد
+Create,إنشاء
+Created,تم الإنشاء
+Crew,الطاقم
+Crew Role,دور الطاقم
+Crew {0} has had only {1} hours rest,أفراد الطاقم {0} حصلوا على {1} ساعة راحة فقط
+Crew {0} is already assigned to trip {1},الفرد {0} معيّن مسبقاً على الرحلة {1}
+Crew {0}: {1},الطاقم {0}: {1}
+Critical,حرج
+Currency,العملة
+Current Custodian,العهدة الحالية لدى
+Current Custodian Type,نوع العهدة الحالية
+Custodian,أمين العهدة
+Custody cannot transfer to the same party,لا يمكن نقل العهدة إلى الطرف نفسه
+Custody entries are append-only. Corrections are posted as reversals so the audit chain stays intact.,قيود العهدة للإضافة فقط. تُصحَّح بقيود عكسية حفاظاً على سلامة سلسلة التدقيق.
+Custody entries cannot be cancelled. Post a reversing entry instead — ,لا يمكن إلغاء قيود العهدة. رحّل قيداً عكسياً بدلاً من ذلك — 
+Custody entries cannot be cancelled. Post a reversing entry instead — the chain of custody is an audit record.,لا يمكن إلغاء قيود العهدة. رحّل قيداً عكسياً بدلاً من ذلك — سلسلة العهدة سجل تدقيقي.
+Custody entries cannot be deleted.,لا يمكن حذف قيود العهدة.
+Custody entries exist against this trip. It cannot be cancelled.,توجد قيود عهدة على هذه الرحلة، ولا يمكن إلغاؤها.
+Customer,العميل
+Customer Refusal,رفض العميل
+Customer Site,موقع العميل
+Daily,يومي
+Damaged Amount,مبلغ التالف
+Damaged Note,ورقة تالفة
+Dashboard,لوحة المعلومات
+Date,التاريخ
+Days,الأيام
+Days To Expiry,الأيام حتى الانتهاء
+Declared Amount,المبلغ المصرّح به
+Declared Value,القيمة المصرّح بها
+Default Billing Item,صنف الفوترة الافتراضي
+Default Company,الشركة الافتراضية
+Default Currency,العملة الافتراضية
+Default Geofence Radius,نصف قطر السياج الافتراضي
+Default Vault,الخزنة الافتراضية
+Default View,العرض الافتراضي
+Delay,تأخير
+Delivery,تسليم
+Denomination,الفئة
+Denominations,الفئات النقدية
+Deposited,تم الإيداع
+Description,الوصف
+Designation,المسمى الوظيفي
+Detail,التفاصيل
+Detailed,تفصيلي
+Detailed board,اللوحة التفصيلية
+Device ID,معرّف الجهاز
+Device Label,اسم الجهاز
+Disabled,معطّل
+Discrepancy,الفرق
+Discrepancy Date,تاريخ الفرق
+Discrepancy Expense Account,حساب مصروف الفروقات
+Discrepancy Hold Threshold,حد تعليق الفوترة
+Discrepancy Income Account,حساب إيراد الفروقات
+Discrepancy Type,نوع الفرق
+Discrepancy accounts are not configured — no journal entry posted.,حسابات الفروقات غير مهيأة — لم يُرحَّل أي قيد.
+Dispatch,الإرسال
+Dispatch Check,فحص الإرسال
+Dispatch Controls,ضوابط الإرسال
+Dispatch Override By,تجاوز الإرسال بواسطة
+Dispatch Override Reason,سبب تجاوز الإرسال
+Dispatch Trip,إرسال الرحلة
+Dispatch anyway,الإرسال رغم ذلك
+Dispatch blocked:,الإرسال محظور:
+Dispatch overridden on {0}: {1},تم تجاوز بوابة الإرسال في {0}: {1}
+Dispatch override is disabled,تجاوز بوابة الإرسال معطّل
+Dispatch with Override,إرسال مع تجاوز
+Dispatchable,قابلة للإرسال
+Dispatched,تم الإرسال
+Distance (km),المسافة (كم)
+Distance Km,المسافة (كم)
+DocType,نوع المستند
+Document,المستند
+Document Expiry,انتهاء الوثيقة
+Document Number,رقم الوثيقة
+Document Type,نوع الوثيقة
+Downtime Hours,ساعات التوقف
+Draft,مسودة
+Driver,السائق
+Driving licence,رخصة القيادة
+Dual Approval,اعتماد مزدوج
+Due Date,تاريخ الاستحقاق
+Due Odometer,قراءة العداد المستحقة
+Duplicate,مكرر
+Dwell Minutes,دقائق التوقف
+Emergency,طارئ
+Emergency Call Out,استدعاء طارئ
+Employee,الموظف
+Employee Name,اسم الموظف
+Employee is not active,الموظف غير نشط
+Employee record not found,سجل الموظف غير موجود
+Employee {0} is listed twice in the crew,الموظف {0} مُدرج مرتين في الطاقم
+Enable Bilingual Labels,تفعيل التسميات ثنائية اللغة
+Enable Hash Chain,تفعيل سلسلة البصمات
+Enabled,مفعّل
+End Date,تاريخ الانتهاء
+Ended At,انتهت في
+Entry,دخول
+Entry Datetime,تاريخ ووقت القيد
+Error Message,رسالة الخطأ
+Estimated Cost,التكلفة التقديرية
+Event Time,وقت الحدث
+Event Type,نوع الحدث
+Evidence,الأدلة
+Exception Note,ملاحظة الاستثناء
+Excess,زيادة
+Exit,خروج
+Expected Bags,الأكياس المتوقعة
+Expense Account,حساب المصروف
+Expired,منتهٍ
+Expiring,قارب الانتهاء
+Expiry,الانتهاء
+Expiry Alert Days,أيام التنبيه قبل الانتهاء
+Expiry Date,تاريخ الانتهاء
+Explanation,التوضيح
+Failed,فشل
+False Alarm,إنذار كاذب
+Field,ميداني
+Filters Json,عوامل التصفية
+Filters must be valid JSON,يجب أن تكون عوامل التصفية بصيغة JSON صحيحة
+Finance,المالية
+Fire,حريق
+Fixed,ثابت
+Fixed Monthly,مبلغ شهري ثابت
+Fleet,الأسطول
+Fleet Availability Log,سجل جاهزية الأسطول
+Flow Name,اسم الخريطة
+Flow Name Ar,اسم الخريطة بالعربية
+Flow Type,نوع الخريطة
+Fortnightly,كل أسبوعين
+Free Units,الوحدات المجانية
+Frequency,الدورية
+From Date,من تاريخ
+From No,من رقم
+From Party,من طرف
+From Party Type,نوع الطرف المسلِّم
+Fuel Card No,رقم بطاقة الوقود
+Fuel Date,تاريخ التزود بالوقود
+Fuel Issued Litres,لترات الوقود المصروفة
+GPS Position Event,حدث الموقع الجغرافي
+GPS Provider,مزود التتبع
+General,عام
+Geofence,سياج جغرافي
+Geofence Breach,اختراق السياج
+Geofence Event,حدث السياج الجغرافي
+Geofence Name,اسم السياج
+Geofence Type,نوع السياج
+Governance,الحوكمة
+Gps Provider,مزود التتبع
+Guard,حارس
+Heading,الاتجاه
+Held,معلّق
+High,مرتفع
+Hold Billing On Discrepancy,تعليق الفوترة عند وجود فرق
+Hold On Open Discrepancy,التعليق عند فرق مفتوح
+Hold Reason,سبب التعليق
+ID Number,رقم الهوية
+Icon,الأيقونة
+Idx Seq,التسلسل
+Ignition,المحرك
+In Progress,قيد التنفيذ
+In Service,في الخدمة
+In Transit,قيد النقل
+Incident Category,تصنيف الحادثة
+Incident Date,تاريخ الحادثة
+Incident Datetime,تاريخ ووقت الحادثة
+Incident Type,نوع الحادثة
+Info,معلومة
+Inspection,فحص
+Insurance,التأمين
+Insurance Claim No,رقم مطالبة التأمين
+Interface Direction,اتجاه الواجهة
+Invalid webhook secret,مفتاح الويب هوك غير صحيح
+Invoiced,تم إصدار الفاتورة
+Iqama,الإقامة
+Is Default,افتراضي
+Is Erpnext Standard,مستند ERPNext قياسي
+Is Reversal,قيد عكسي
+Issue Date,تاريخ الإصدار
+Issued,صُرف
+Issued To,صُرف إلى
+Issuing Authority,الجهة المُصدِرة
+Istimara,الاستمارة
+Item Label,اسم البند
+Item Label Ar,اسم البند بالعربية
+Items,البنود
+Job Date,تاريخ الطلب
+Job date {0} falls outside the contract period {1} to {2},تاريخ الطلب {0} خارج فترة العقد من {1} إلى {2}
+Journal Entry,قيد اليومية
+Journey,رحلة العمل
+Journey (customer view),رحلة العمل (عرض العميل)
+Journey renders one linear start-to-end spine. Detailed renders swimlanes for operators.,«رحلة العمل» تعرض مساراً خطياً واحداً من البداية إلى النهاية، و«تفصيلي» يعرض مسارات متوازية للمشغّلين.
+Key Or Pin Custody,عهدة المفتاح أو الرمز
+Km Per Litre,كم لكل لتر
+Lane,المسار
+Last Error,آخر خطأ
+Last Sync,آخر مزامنة
+Latitude,خط العرض
+Left to Right,من اليسار إلى اليمين
+Left to right,من اليسار إلى اليمين
+Left to right / Right to left,من اليسار إلى اليمين / من اليمين إلى اليسار
+Licence Ok,الرخصة سارية
+Lines,البنود
+List,قائمة
+Litres,اللترات
+Loading…,جارٍ التحميل…
+Location,الموقع
+Log Date,تاريخ السجل
+Longitude,خط الطول
+Lost,مفقود
+Low,منخفض
+Maintenance Due,صيانة مستحقة
+Maintenance Type,نوع الصيانة
+"Makes /cit-journey readable without a login, so the link can be sent to a customer.",يتيح فتح صفحة /cit-journey دون تسجيل دخول، ليمكن إرسال الرابط إلى العميل.
+Manage steps and cards,إدارة الخطوات والبطاقات
+Mandatory,إلزامي
+Manual,يدوي
+Medical fitness,اللياقة الطبية
+Medium,متوسط
+Message,الرسالة
+Min Crew,الحد الأدنى للطاقم
+Minimum Charge,الحد الأدنى للرسوم
+Minimum Crew Size,الحد الأدنى لعدد الطاقم
+Minimum Monthly Commitment,الحد الأدنى للالتزام الشهري
+Minimum Rest Hours,الحد الأدنى لساعات الراحة
+Missing,مفقود
+Missing Bag,كيس مفقود
+Missing client_event_id,معرّف حدث الجهاز مفقود
+Mobile,الجوال
+Monthly,شهري
+Morning,صباحي
+Move to {0},الانتقال إلى {0}
+Naming Series,تسلسل الترقيم
+New,جديد
+Night,ليلي
+No documents mapped,لا توجد مستندات مرتبطة
+No position from vehicle {0} for more than {1} minutes,لم يرد موقع من المركبة {0} منذ أكثر من {1} دقيقة
+No signature or OTP verification captured on this proof of delivery.,لم يُسجَّل توقيع ولا تحقق برمز مؤقت على إثبات التسليم هذا.
+Node Label,اسم العقدة
+Node Label Ar,اسم العقدة بالعربية
+Node Type,نوع العقدة
+None,لا شيء
+Normal,عادي
+Not Billed,لم تُفوتر
+Not Claimed,لم تُقدَّم مطالبة
+Notes,ملاحظات
+Notice Days,أيام الإشعار
+Number,الرقم
+Odometer,عداد المسافة
+Odometer In,العداد عند العودة
+Odometer Out,العداد عند الخروج
+Off Road,خارج الخدمة
+On Call,عند الطلب
+On Time %,نسبة الالتزام بالوقت
+On Trip,في رحلة
+Only {0} may approve a discrepancy in band {1},الاعتماد في النطاق {1} مقصور على {0}
+Only {0} may override a dispatch block,تجاوز حظر الإرسال مقصور على {0}
+Open,مفتوح
+Open customer view,فتح عرض العميل
+Open discrepancy of {0},فرق مفتوح بقيمة {0}
+Open in the system,فتح داخل النظام
+Operating Permit,تصريح التشغيل
+Operations,العمليات
+Other,أخرى
+Otp Verified,تم التحقق برمز مؤقت
+Override Dispatch Block,تجاوز حظر الإرسال
+Override Role,صلاحية التجاوز
+Override reason,سبب التجاوز
+POD Submission,تقديم إثبات التسليم
+Page,صفحة
+Panic,استغاثة
+Panic raised by {0} on trip {1},استغاثة من {0} في الرحلة {1}
+Payload,البيانات
+Penalty Amount,مبلغ الغرامة
+Penalty Cap Percent,سقف الغرامة (٪)
+Penalty Type,نوع الغرامة
+Penalty Value,قيمة الغرامة
+Pending,قيد الانتظار
+Pending Approval,بانتظار الاعتماد
+Per Bag,لكل كيس
+Per KM,لكل كيلومتر
+Per Stop,لكل محطة
+Per Trip,لكل رحلة
+Percent of Monthly Fee,نسبة من الرسوم الشهرية
+Percent of Trip Value,نسبة من قيمة الرحلة
+Periodic Inspection,الفحص الدوري
+Photo,الصورة
+Photos,الصور
+Pickup,استلام
+Pieces,عدد القطع
+Planned,مخططة
+Planned Arrival,الوصول المخطط
+Planned End,النهاية المخططة
+Planned Start,البداية المخططة
+Platform,نظام التشغيل
+Please log in to view this page.,يرجى تسجيل الدخول لعرض هذه الصفحة.
+Pod Datetime,تاريخ ووقت التسليم
+Pod Type,نوع الإثبات
+Police Report No,رقم محضر الشرطة
+Poll Interval Minutes,فترة الاستعلام (دقائق)
+Polygon,مضلع
+Polygon Json,إحداثيات المضلع
+Position Retention Days,مدة حفظ المواقع (أيام)
+Post Reversal,ترحيل قيد عكسي
+Post Trip,بعد الرحلة
+Post reversal,ترحيل القيد العكسي
+Posting,الترحيل
+Posting Date,تاريخ الترحيل
+Pre Trip,قبل الرحلة
+Pre-Trip Check,الفحص قبل الرحلة
+Pre-trip check not completed: {0},لم يكتمل فحص ما قبل الرحلة: {0}
+Preventive,وقائية
+Previous Entry,القيد السابق
+Previous Hash,البصمة السابقة
+Print / Save as PDF,طباعة / حفظ كملف PDF
+Priority,الأولوية
+Process Flow,خريطة العملية
+Prohibited,منطقة محظورة
+Prolonged Halt,توقف مطوّل
+Prolonged Halt Minutes,دقائق التوقف المطوّل
+Provider Key,مفتاح المزود
+Provider Name,اسم المزود
+Publish Journey Page Publicly,نشر صفحة رحلة العمل للعامة
+Purchase Invoice,فاتورة مشتريات
+Qty,الكمية
+Quarantined,محجوز للمراجعة
+Radius Metres,نصف القطر (متر)
+Rate,السعر
+Rate Percent,النسبة (٪)
+Rate Trips,تسعير الرحلات
+Rated,تم التسعير
+Raw Payload,البيانات الخام
+Reading direction: {0},اتجاه القراءة: {0}
+Reason,السبب
+Received,تم الاستلام
+Received On,تاريخ الاستلام
+Reconciled,تمت المطابقة
+Reconciliation Status,حالة المطابقة
+Reconciliation Time,وقت المطابقة
+Reconciliation: {0},المطابقة: {0}
+Recorded By,سُجّل بواسطة
+Recoverable,قابل للاسترداد
+Recovered,تم الاسترداد
+Reference,المرجع
+Reference Doctype,نوع المستند المرجعي
+Reference Name,اسم المستند المرجعي
+Refresh,تحديث
+Rejected,مرفوض
+Remarks,ملاحظات
+Renewed,تم التجديد
+Repair Cost,تكلفة الإصلاح
+Report,تقرير
+Report Name,اسم التقرير
+Report view,عرض التقرير
+Reported By,أبلغ عنه
+Request Date,تاريخ الطلب
+Required Approver Role,صلاحية المعتمد المطلوبة
+Requires Count,يتطلب العد
+Requires Pod,يتطلب إثبات تسليم
+Reserved,محجوزة
+Resolution,المعالجة
+Resolved,تمت المعالجة
+Responsibility,المسؤولية
+Responsible Employee,الموظف المسؤول
+Responsible Party,الطرف المسؤول
+Responsible party,الطرف المسؤول
+Restricted Zone,منطقة محظورة
+Result Doctype,نوع المستند الناتج
+Result Name,اسم المستند الناتج
+Returned,أُعيد
+Returned to Vault,عاد إلى الخزنة
+Reversal reason: {0},سبب القيد العكسي: {0}
+Reverse Custody Entry,عكس قيد العهدة
+Reverses Entry,يعكس القيد
+Reviewed,تمت المراجعة
+Right to Left,من اليمين إلى اليسار
+Right to left,من اليمين إلى اليسار
+Role,الصلاحية
+Root Cause,السبب الجذري
+Route,المسار
+Route Corridor,ممر المسار
+Route Deviation,انحراف عن المسار
+Route Override,مسار مخصص
+SLA Risk,خطر مستوى الخدمة
+Sales Invoice,فاتورة مبيعات
+Scheduled,مجدولة
+Seal Broken,ختم مكسور
+Seal Entry,قيد الختم
+Seal Intact,الختم سليم
+Seal No,رقم الختم
+Seal Prefix,بادئة الأختام
+Seal Register,سجل الأختام
+Seal Status,حالة الختم
+Seal range end cannot be lower than the start,نهاية نطاق الأختام لا يمكن أن تقل عن بدايته
+Seal {0} already exists in another register,الختم {0} موجود في سجل آخر
+Seal {0} is already applied to bag {1},الختم {0} مستخدم على الكيس {1}
+Seal {0} reported not intact at proof of delivery {1},أُبلغ أن الختم {0} غير سليم في إثبات التسليم {1}
+Seals,الأختام
+Security Event,حدث أمني
+Security clearance,التصريح الأمني
+Selecting and pricing completed trips…,جارٍ اختيار الرحلات المكتملة وتسعيرها…
+Sequence,التسلسل
+Sequence No,رقم التسلسل
+Service Contract,عقد الخدمة
+Service Levels,مستويات الخدمة
+Service Requirements,متطلبات الخدمة
+Service Type,نوع الخدمة
+Service Type Name,اسم نوع الخدمة
+Service Type Name Ar,اسم نوع الخدمة بالعربية
+Service Window From,نافذة الخدمة من
+Service Window To,نافذة الخدمة إلى
+Session Date,تاريخ الجلسة
+Settled,تمت التسوية
+Settled Amount,المبلغ المسدد
+Setup,الإعدادات
+Severity,درجة الخطورة
+Shape,الشكل
+Shift,الوردية
+Shortage,عجز
+Show Arabic,عرض العربية
+Show Count,إظهار العدد
+Show counts,إظهار الأعداد
+Signal Lost,انقطاع الإشارة
+Signatory,الموقّع
+Signatory Designation,مسمى الموقّع
+Signatory ID,هوية الموقّع
+Signatory Name,اسم الموقّع
+Signature,التوقيع
+Site Closed,الموقع مغلق
+Site Code,رمز الموقع
+Site Name,اسم الموقع
+Site Name Ar,اسم الموقع بالعربية
+Site {0} does not belong to customer {1},الموقع {0} لا يخص العميل {1}
+Site {0} does not belong to {1},الموقع {0} لا يخص {1}
+Sites,المواقع
+Sites Covered,المواقع المشمولة
+Skipped,تم التخطي
+Sla Metric,مؤشر مستوى الخدمة
+Sla Targets,أهداف مستوى الخدمة
+Special Instructions,تعليمات خاصة
+Speed Kmh,السرعة (كم/س)
+Speeding,تجاوز السرعة
+Speeding Threshold Kmh,حد السرعة (كم/س)
+Stage Key,رمز المرحلة
+Stage Label,اسم المرحلة
+Stage Label Ar,اسم المرحلة بالعربية
+Stages,المراحل
+Standard ERPNext document,مستند ERPNext قياسي
+Standard Route,المسار المعتاد
+Start Date,تاريخ البداية
+Started At,بدأت في
+Station,المحطة
+Status,الحالة
+Stop Status,حالة المحطة
+Stop Type,نوع المحطة
+Stops,المحطات
+Submitted,مُقدَّمة
+Switch interface language,تبديل لغة الواجهة
+Switching language…,جارٍ تبديل اللغة…
+Sync Event,حدث المزامنة
+Tamper Evidence,دليل عدم العبث
+Target Minutes,الدقائق المستهدفة
+Target Percent,النسبة المستهدفة
+Tariff,التعرفة
+Team Leader,قائد الفريق
+Telematics,التتبع
+Template Name,اسم القالب
+Terminated,منتهٍ
+The counter and the witness must be different people,يجب أن يكون العادّ والشاهد شخصين مختلفين
+The journey has not been set up yet. Run bench migrate to seed it.,لم يتم إعداد رحلة العمل بعد. شغّل bench migrate لتهيئتها.
+Theft,سرقة
+Third Party Involved,طرف ثالث متورط
+To Date,إلى تاريخ
+To No,إلى رقم
+To Party,إلى طرف
+To Party Type,نوع الطرف المستلم
+Total Amount,إجمالي المبلغ
+Total Counted,إجمالي المعدود
+Total Declared,إجمالي المصرّح به
+Total Declared Value,إجمالي القيمة المصرّح بها
+Total Seals,إجمالي الأختام
+Total Variance,إجمالي الفرق
+Totals,الإجماليات
+Transit Time,زمن النقل
+Trigger,المحفّز
+Trip,الرحلة
+Trip Completion,إتمام الرحلة
+Trip Date,تاريخ الرحلة
+Trips Billed,الرحلات المفوترة
+Trips Held,الرحلات المعلّقة
+Type,النوع
+Typical Duration,المدة المعتادة
+Tyre,إطار
+URL,الرابط
+Unbanded,خارج النطاقات
+Under Investigation,قيد التحقيق
+Under Repair,قيد الإصلاح
+Under Review,قيد المراجعة
+Unknown event type,نوع حدث غير معروف
+Unscheduled Stop,توقف غير مجدول
+Unsupported language,لغة غير مدعومة
+Used On,استُخدم في
+Username,اسم المستخدم
+Valid,ساري
+Value Band From,نطاق القيمة من
+Value Band To,نطاق القيمة إلى
+Value Impact,الأثر المالي
+Vandalism,تخريب
+Variance,الفرق
+Variance Amount,مبلغ الفرق
+Variance Minutes,فرق الدقائق
+Vault,الخزنة
+Vault & Cash,الخزنة والنقد
+Vault Entry,دخول الخزنة
+Vault Exit,خروج الخزنة
+Vault Name,اسم الخزنة
+Vault Transfer,تحويل بين الخزائن
+Vehicle,المركبة
+Vehicle Compliance Document,وثيقة نظامية للمركبة
+Vehicle Incident,حادثة مركبة
+Vehicle Log,سجل المركبة
+Vehicle Readings,قراءات المركبة
+Vehicle incident {0},حادثة المركبة {0}
+Vehicle {0} entered prohibited zone {1},دخلت المركبة {0} المنطقة المحظورة {1}
+Vehicle {0} recorded {1} km/h,سجّلت المركبة {0} سرعة {1} كم/س
+Vehicle {0} stationary for more than {1} minutes off site,المركبة {0} متوقفة أكثر من {1} دقيقة خارج المواقع
+Vehicle {0} {1} {2},المركبة {0} {1} {2}
+Vehicle {0}: {1},المركبة {0}: {1}
+Verified,تم التحقق
+Verified {0} entries. The chain is intact.,تم التحقق من {0} قيداً. السلسلة سليمة.
+Verify custody chain,التحقق من سلسلة العهدة
+View,العرض
+Visits Per Period,الزيارات لكل فترة
+Voided,ملغى
+Waiting Time,وقت الانتظار
+Waived,متنازل عنه
+Waived By,تنازل بواسطة
+Warning,تحذير
+Weapon permit,تصريح السلاح
+Webhook Secret,المفتاح السري للويب هوك
+Weekly,أسبوعي
+What Happens,ما الذي يحدث
+What Happens (Arabic),ما الذي يحدث (بالعربية)
+What The System Guarantees,ما يضمنه النظام
+Who Does It,من ينفّذها
+Window From,النافذة من
+Window To,النافذة إلى
+Witness,الشاهد
+Workflow State,حالة سير العمل
+Workshop,الورشة
+Written Off,شُطب
+Yes,نعم
+expired {0} days ago,انتهت قبل {0} يوماً
+expires in {0} days,تنتهي خلال {0} يوماً
+get paid,التحصيل
+iOS,آي أو إس
+on the road,على الطريق
+plan and send,التخطيط والإرسال
+prove the money,إثبات المبالغ
+set up once,إعداد لمرة واحدة
+{0} due for vehicle {1} on {2},{0} مستحقة للمركبة {1} بتاريخ {2}
+{0} expired on {1},{0} انتهت بتاريخ {1}
+{0} for vehicle {1} expired {2} days ago,{0} للمركبة {1} انتهت قبل {2} يوماً
+{0} for vehicle {1} expires in {2} days,{0} للمركبة {1} تنتهي خلال {2} يوماً
+{0} for {1} {2},{0} لـ {1} {2}
+"{0} lines rated, total {1}",تم تسعير {0} بنداً بإجمالي {1}
+"{0} steps, one system. Every step above is a live screen — not a diagram.",{0} خطوات، نظام واحد. كل خطوة أعلاه شاشة فعلية في النظام، لا مجرد رسم توضيحي.
+{0} trip(s) are held back from billing because a cash discrepancy is still open.,تم تعليق {0} رحلة عن الفوترة بسبب وجود فرق نقدي مفتوح.
+{0} — trip {1},{0} — الرحلة {1}
+Accept Handset Position Beacon,قبول إشارة الموقع من الجهاز
+Activate New Devices Automatically,تفعيل الأجهزة الجديدة تلقائياً
+Attachment is larger than the {0} MB limit.,حجم المرفق يتجاوز الحد المسموح {0} ميجابايت.
+Attachment is not valid base64.,المرفق ليس بترميز base64 صالح.
+Device {0} was enrolled by {1} and is waiting to be activated.,تم تسجيل الجهاز {0} بواسطة {1} وهو بانتظار التفعيل.
+Enable Mobile API,تفعيل واجهة تطبيق الجوال
+Maximum Events Per Push,الحد الأقصى للأحداث في كل إرسال
+Minimum App Version,الحد الأدنى لإصدار التطبيق
+Missing X-CIT-Device header.,ترويسة X-CIT-Device مفقودة.
+Mobile Crew Application,تطبيق الطاقم على الجوال
+New CIT device awaiting approval,جهاز جديد بانتظار الموافقة
+No active Employee record is linked to {0}.,لا يوجد سجل موظف نشط مرتبط بـ {0}.
+The mobile API is disabled for this site.,واجهة تطبيق الجوال معطّلة في هذا الموقع.
+This device has been deactivated. Contact the control room.,تم إيقاف هذا الجهاز. تواصل مع غرفة العمليات.
+This device has been submitted for approval. The control room must enable it.,تم إرسال هذا الجهاز للموافقة. يجب على غرفة العمليات تفعيله.
+This device is not registered. Contact the control room.,هذا الجهاز غير مسجّل. تواصل مع غرفة العمليات.
+This device is registered to another crew member.,هذا الجهاز مسجّل لعضو طاقم آخر.
+Too many events in one push (limit {0}).,عدد الأحداث في الإرسال الواحد كبير جداً (الحد {0}).
+You may only download your own trips.,يمكنك تنزيل رحلاتك فقط.
+Your user does not have a CIT crew role.,حساب المستخدم لا يملك دور طاقم نقل الأموال.
+No employee is attached to this session.,لا يوجد موظف مرتبط بهذه الجلسة.
+Retry Count,عدد المحاولات
+The server rejected this record. It is held for review.,رفض الخادم هذا السجل. تم حجزه للمراجعة.
+You are not assigned to trip {0}.,أنت غير معيّن على الرحلة {0}.

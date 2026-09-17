@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3A4654">
+<title>AlphaX CIT Crew</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!-- ============================ chrome ============================ -->
+<header class="bar" id="topbar">
+  <button class="bar-back" id="btn-back" hidden aria-label="Back">&#8592;</button>
+  <div class="bar-title">
+    <strong id="bar-heading">AlphaX CIT</strong>
+    <span id="bar-sub"></span>
+  </div>
+  <button class="bar-lang" id="btn-lang" aria-label="Switch language">ع</button>
+</header>
+
+<div class="link-state" id="linkstate" data-state="online">
+  <span class="dot"></span>
+  <span id="linkstate-text">Online</span>
+  <button id="btn-sync" class="link-sync">Sync now</button>
+</div>
+
+<main id="root"></main>
+
+<nav class="tabs" id="tabs" hidden>
+  <button data-view="trips" class="is-active"><span>Trips</span></button>
+  <button data-view="outbox"><span>Outbox</span><b class="badge" id="tab-outbox-count" hidden>0</b></button>
+  <button data-view="settings"><span>Settings</span></button>
+</nav>
+
+<!-- ============================ templates ============================ -->
+
+<template id="tpl-login">
+  <section class="pane pane-login">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="56" height="56">
+        <path d="M32 4 56 14v18c0 14-10 25-24 28C18 57 8 46 8 32V14z" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M22 32h20M22 24h20M22 40h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1 data-i18n="signin_title">Sign in to start your shift</h1>
+    <p class="muted" data-i18n="signin_help">Your trips are downloaded once and stay available without a signal.</p>
+
+    <label data-i18n="site_url">Site address</label>
+    <input id="f-site" type="url" inputmode="url" autocomplete="url" placeholder="https://erp.example.sa">
+
+    <label data-i18n="user">User</label>
+    <input id="f-user" type="text" inputmode="email" autocomplete="username" autocapitalize="none">
+
+    <label data-i18n="password">Password</label>
+    <input id="f-pass" type="password" autocomplete="current-password">
+
+    <p class="err" id="login-err" hidden></p>
+    <button class="btn btn-primary" id="btn-login" data-i18n="signin">Sign in</button>
+    <button class="btn btn-ghost" id="btn-demo" data-i18n="try_demo">Open demo shift</button>
+    <p class="fineprint" id="device-line"></p>
+  </section>
+</template>
+
+<template id="tpl-trips">
+  <section class="pane">
+    <div class="empty" id="trips-empty" hidden>
+      <h2 data-i18n="no_trips">No trips assigned</h2>
+      <p data-i18n="no_trips_help">Pull to refresh once you have a signal, or ask dispatch to assign you.</p>
+    </div>
+    <ul class="trip-list" id="trip-list"></ul>
+  </section>
+</template>
+
+<template id="tpl-trip">
+  <section class="pane">
+    <div class="trip-head">
+      <div class="trip-head-row">
+        <span class="chip" id="trip-status"></span>
+        <span class="mono" id="trip-vehicle"></span>
+      </div>
+      <h2 id="trip-name"></h2>
+      <dl class="facts">
+        <div><dt data-i18n="stops">Stops</dt><dd id="trip-stopcount"></dd></div>
+        <div><dt data-i18n="declared">Declared</dt><dd id="trip-value" class="num"></dd></div>
+        <div><dt data-i18n="vault">Vault</dt><dd id="trip-vault"></dd></div>
+      </dl>
+    </div>
+
+    <div class="section" id="checklist-wrap">
+      <h3 data-i18n="pretrip">Pre-trip checks</h3>
+      <ul class="checks" id="checklist"></ul>
+    </div>
+
+    <div class="section">
+      <h3 data-i18n="route">Route</h3>
+      <ol class="stops" id="stops"></ol>
+    </div>
+
+    <div class="actionbar">
+      <button class="btn btn-panic" id="btn-panic" data-i18n="panic">Panic</button>
+      <button class="btn btn-primary" id="btn-trip-action"></button>
+    </div>
+  </section>
+</template>
+
+<template id="tpl-stop">
+  <section class="pane">
+    <div class="stop-hero">
+      <span class="seq" id="stop-seq"></span>
+      <h2 id="stop-site"></h2>
+      <p class="muted" id="stop-window"></p>
+      <div class="hero-value">
+        <span class="num" id="stop-value"></span>
+        <span class="unit">SAR</span>
+      </div>
+      <p class="muted"><span id="stop-bags"></span> <span data-i18n="bags">bags</span> &middot; <span id="stop-type"></span></p>
+    </div>
+
+    <div class="section" id="site-detail"></div>
+
+    <div class="actionbar actionbar-stack" id="stop-actions"></div>
+  </section>
+</template>
+
+<template id="tpl-pod">
+  <section class="pane">
+    <h2 data-i18n="pod_title">Proof of delivery</h2>
+    <p class="muted" id="pod-context"></p>
+
+    <div class="section">
+      <h3 data-i18n="bags_seals">Bags and seals</h3>
+      <ul class="bags" id="pod-bags"></ul>
+      <button class="btn btn-ghost" id="btn-add-bag" data-i18n="add_bag">Add bag</button>
+    </div>
+
+    <div class="section">
+      <h3 data-i18n="receiver">Who received it</h3>
+      <label data-i18n="receiver_name">Name</label>
+      <input id="pod-name" type="text">
+      <label data-i18n="receiver_id">ID number</label>
+      <input id="pod-id" type="text" inputmode="numeric">
+      <div class="authorised" id="pod-authorised" hidden></div>
+    </div>
+
+    <div class="section">
+      <h3 data-i18n="signature">Signature</h3>
+      <div class="sigwrap">
+        <canvas id="sig" width="640" height="260"></canvas>
+        <button class="sig-clear" id="btn-sig-clear" data-i18n="clear">Clear</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 data-i18n="photos">Photos</h3>
+      <div class="photos" id="pod-photos"></div>
+      <label class="btn btn-ghost" for="pod-file" data-i18n="add_photo">Add photo</label>
+      <input id="pod-file" type="file" accept="image/*" capture="environment" hidden multiple>
+    </div>
+
+    <p class="err" id="pod-err" hidden></p>
+    <div class="actionbar">
+      <button class="btn btn-ghost" id="btn-pod-cancel" data-i18n="cancel">Cancel</button>
+      <button class="btn btn-primary" id="btn-pod-save" data-i18n="confirm_pod">Confirm and queue</button>
+    </div>
+  </section>
+</template>
+
+<template id="tpl-incident">
+  <section class="pane">
+    <h2 data-i18n="report_incident">Report an incident</h2>
+    <label data-i18n="category">Category</label>
+    <select id="inc-cat"></select>
+    <label data-i18n="severity">Severity</label>
+    <select id="inc-sev">
+      <option value="Low">Low</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+    <label data-i18n="what_happened">What happened</label>
+    <textarea id="inc-desc" rows="5"></textarea>
+    <div class="actionbar">
+      <button class="btn btn-ghost" id="btn-inc-cancel" data-i18n="cancel">Cancel</button>
+      <button class="btn btn-primary" id="btn-inc-save" data-i18n="queue_report">Queue report</button>
+    </div>
+  </section>
+</template>
+
+<template id="tpl-outbox">
+  <section class="pane">
+    <div class="empty" id="outbox-empty" hidden>
+      <h2 data-i18n="outbox_clear">Everything is synced</h2>
+      <p data-i18n="outbox_clear_help">Work you record offline waits here until the connection returns.</p>
+    </div>
+    <ul class="outbox" id="outbox-list"></ul>
+  </section>
+</template>
+
+<template id="tpl-settings">
+  <section class="pane">
+    <div class="section">
+      <h3 data-i18n="shift">Shift</h3>
+      <dl class="facts facts-stack">
+        <div><dt data-i18n="user">User</dt><dd id="set-user"></dd></div>
+        <div><dt data-i18n="employee">Employee</dt><dd id="set-emp"></dd></div>
+        <div><dt data-i18n="site_url">Site address</dt><dd id="set-site" class="wrap"></dd></div>
+        <div><dt data-i18n="device">Device</dt><dd id="set-device" class="mono"></dd></div>
+        <div><dt data-i18n="last_pull">Last download</dt><dd id="set-pull"></dd></div>
+      </dl>
+    </div>
+    <div class="section">
+      <h3 data-i18n="direction">Reading direction</h3>
+      <div class="segmented" id="dir-seg">
+        <button data-dir="auto" data-i18n="auto">Automatic</button>
+        <button data-dir="ltr">LTR</button>
+        <button data-dir="rtl">RTL</button>
+      </div>
+    </div>
+    <div class="actionbar actionbar-stack">
+      <button class="btn btn-ghost" id="btn-refresh" data-i18n="download_again">Download trips again</button>
+      <button class="btn btn-danger" id="btn-logout" data-i18n="end_shift">End shift and sign out</button>
+    </div>
+    <p class="fineprint" data-i18n="wipe_note">Signing out clears cached trips. Anything still in the outbox is sent first.</p>
+  </section>
+</template>
+
+<div class="toast" id="toast" hidden></div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-card">
+    <h3 id="sheet-title"></h3>
+    <p id="sheet-body"></p>
+    <div class="sheet-actions">
+      <button class="btn btn-ghost" id="sheet-no"></button>
+      <button class="btn btn-danger" id="sheet-yes"></button>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="store.js"></script>
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
