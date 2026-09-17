@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "node_label",
+  "node_label_ar",
+  "process_flow",
+  "stage_key",
+  "sequence",
+  "cb1",
+  "node_type",
+  "document_type",
+  "is_erpnext_standard",
+  "default_view",
+  "report_name",
+  "route_override",
+  "sb1",
+  "filters_json",
+  "description",
+  "cb2",
+  "icon",
+  "allowed_roles",
+  "show_count",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "node_label",
+   "fieldtype": "Data",
+   "label": "Node Label",
+   "reqd": 1,
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "node_label_ar",
+   "fieldtype": "Data",
+   "label": "Node Label Ar"
+  },
+  {
+   "fieldname": "process_flow",
+   "fieldtype": "Link",
+   "label": "Process Flow",
+   "options": "CIT Process Flow",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "stage_key",
+   "fieldtype": "Data",
+   "label": "Stage Key",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "node_type",
+   "fieldtype": "Select",
+   "label": "Node Type",
+   "options": "DocType\nReport\nDashboard\nPage\nURL",
+   "reqd": 1,
+   "default": "DocType",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType",
+   "in_list_view": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "is_erpnext_standard",
+   "fieldtype": "Check",
+   "label": "Is Erpnext Standard",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "default_view",
+   "fieldtype": "Select",
+   "label": "Default View",
+   "options": "List\nNew\nReport\nCalendar\nDashboard",
+   "default": "List",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "report_name",
+   "fieldtype": "Data",
+   "label": "Report Name"
+  },
+  {
+   "fieldname": "route_override",
+   "fieldtype": "Data",
+   "label": "Route Override"
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "filters_json",
+   "fieldtype": "Code",
+   "label": "Filters Json",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon",
+   "default": "octicon octicon-file-text"
+  },
+  {
+   "fieldname": "allowed_roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Allowed Roles",
+   "options": "CIT Node Role"
+  },
+  {
+   "fieldname": "show_count",
+   "fieldtype": "Check",
+   "label": "Show Count",
+   "default": "1"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Process Flow",
+ "name": "CIT Process Node",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "autoname": "format:NODE-{#####}",
+ "title_field": "node_label",
+ "show_title_field_in_link": 1
+}

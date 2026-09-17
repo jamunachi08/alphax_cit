@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "service_contract",
+  "customer",
+  "cit_trip",
+  "cit_job",
+  "cb1",
+  "sla_metric",
+  "breach_date",
+  "target_minutes",
+  "actual_minutes",
+  "variance_minutes",
+  "sb1",
+  "penalty_amount",
+  "reason",
+  "waived",
+  "waived_by",
+  "status",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SLAB-.YYYY.-",
+   "reqd": 1,
+   "default": "SLAB-.YYYY.-"
+  },
+  {
+   "fieldname": "service_contract",
+   "fieldtype": "Link",
+   "label": "Service Contract",
+   "options": "CIT Service Contract",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cit_trip",
+   "fieldtype": "Link",
+   "label": "Cit Trip",
+   "options": "CIT Trip",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cit_job",
+   "fieldtype": "Link",
+   "label": "Cit Job",
+   "options": "CIT Job"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sla_metric",
+   "fieldtype": "Data",
+   "label": "Sla Metric",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "breach_date",
+   "fieldtype": "Date",
+   "label": "Breach Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "target_minutes",
+   "fieldtype": "Int",
+   "label": "Target Minutes"
+  },
+  {
+   "fieldname": "actual_minutes",
+   "fieldtype": "Int",
+   "label": "Actual Minutes"
+  },
+  {
+   "fieldname": "variance_minutes",
+   "fieldtype": "Int",
+   "label": "Variance Minutes",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "label": "Penalty Amount",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "waived",
+   "fieldtype": "Check",
+   "label": "Waived",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "waived_by",
+   "fieldtype": "Link",
+   "label": "Waived By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nReviewed\nApplied\nWaived",
+   "default": "Open",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Commercial",
+ "name": "CIT SLA Breach",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "CIT Commercial Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "autoname": "naming_series:"
+}

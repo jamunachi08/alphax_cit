@@ -1,0 +1,50 @@
+{
+ "content": null,
+ "creation": "2026-09-14 10:00:00",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Process Flow",
+ "name": "cit-flow",
+ "owner": "Administrator",
+ "page_name": "cit-flow",
+ "roles": [
+  {
+   "role": "CIT Manager"
+  },
+  {
+   "role": "CIT Dispatcher"
+  },
+  {
+   "role": "CIT Control Room"
+  },
+  {
+   "role": "CIT Vault Controller"
+  },
+  {
+   "role": "CIT Cash Counter"
+  },
+  {
+   "role": "CIT Fleet Controller"
+  },
+  {
+   "role": "CIT Commercial Manager"
+  },
+  {
+   "role": "CIT Finance"
+  },
+  {
+   "role": "CIT Auditor"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "CIT Process Flow"
+}

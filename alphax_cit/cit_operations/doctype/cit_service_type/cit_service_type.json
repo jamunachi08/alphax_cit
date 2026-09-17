@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type_name",
+  "service_type_name_ar",
+  "charge_basis",
+  "billing_item",
+  "requires_pod",
+  "requires_count",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_type_name",
+   "fieldtype": "Data",
+   "label": "Service Type Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "service_type_name_ar",
+   "fieldtype": "Data",
+   "label": "Service Type Name Ar"
+  },
+  {
+   "fieldname": "charge_basis",
+   "fieldtype": "Select",
+   "label": "Charge Basis",
+   "options": "Per Trip\nPer Stop\nPer Bag\nAd Valorem\nPer KM\nFixed Monthly\nWaiting Time",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "billing_item",
+   "fieldtype": "Link",
+   "label": "Billing Item",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "requires_pod",
+   "fieldtype": "Check",
+   "label": "Requires Pod",
+   "default": "1"
+  },
+  {
+   "fieldname": "requires_count",
+   "fieldtype": "Check",
+   "label": "Requires Count"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Operations",
+ "name": "CIT Service Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "quick_entry": 0,
+ "autoname": "field:service_type_name"
+}

@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "idx_seq",
+  "cit_job",
+  "customer_site",
+  "stop_type",
+  "planned_arrival",
+  "actual_arrival",
+  "actual_departure",
+  "dwell_minutes",
+  "declared_value",
+  "bags_count",
+  "stop_status",
+  "exception_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "idx_seq",
+   "fieldtype": "Int",
+   "label": "Idx Seq",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cit_job",
+   "fieldtype": "Link",
+   "label": "Cit Job",
+   "options": "CIT Job",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_site",
+   "fieldtype": "Link",
+   "label": "Customer Site",
+   "options": "Customer Site",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "stop_type",
+   "fieldtype": "Select",
+   "label": "Stop Type",
+   "options": "Pickup\nDelivery\nATM Replenishment\nVault Transfer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "planned_arrival",
+   "fieldtype": "Datetime",
+   "label": "Planned Arrival",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actual_arrival",
+   "fieldtype": "Datetime",
+   "label": "Actual Arrival",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actual_departure",
+   "fieldtype": "Datetime",
+   "label": "Actual Departure",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dwell_minutes",
+   "fieldtype": "Float",
+   "label": "Dwell Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "declared_value",
+   "fieldtype": "Currency",
+   "label": "Declared Value"
+  },
+  {
+   "fieldname": "bags_count",
+   "fieldtype": "Int",
+   "label": "Bags Count"
+  },
+  {
+   "fieldname": "stop_status",
+   "fieldtype": "Select",
+   "label": "Stop Status",
+   "options": "Pending\nArrived\nCompleted\nFailed\nSkipped",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "exception_note",
+   "fieldtype": "Small Text",
+   "label": "Exception Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Operations",
+ "name": "CIT Trip Stop",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0
+}
