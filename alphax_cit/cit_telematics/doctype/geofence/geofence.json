@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-14 10:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "geofence_name",
+  "geofence_type",
+  "shape",
+  "cb1",
+  "latitude",
+  "longitude",
+  "radius_metres",
+  "polygon_json",
+  "sb1",
+  "customer_site",
+  "vault",
+  "alert_on_entry",
+  "alert_on_exit",
+  "prohibited",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "geofence_name",
+   "fieldtype": "Data",
+   "label": "Geofence Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "geofence_type",
+   "fieldtype": "Select",
+   "label": "Geofence Type",
+   "options": "Customer Site\nVault\nBank\nRestricted Zone\nRoute Corridor",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "shape",
+   "fieldtype": "Select",
+   "label": "Shape",
+   "options": "Circle\nPolygon",
+   "reqd": 1,
+   "default": "Circle",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "radius_metres",
+   "fieldtype": "Float",
+   "label": "Radius Metres",
+   "default": "150"
+  },
+  {
+   "fieldname": "polygon_json",
+   "fieldtype": "Code",
+   "label": "Polygon Json",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "sb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_site",
+   "fieldtype": "Link",
+   "label": "Customer Site",
+   "options": "Customer Site"
+  },
+  {
+   "fieldname": "vault",
+   "fieldtype": "Link",
+   "label": "Vault",
+   "options": "CIT Vault"
+  },
+  {
+   "fieldname": "alert_on_entry",
+   "fieldtype": "Check",
+   "label": "Alert On Entry"
+  },
+  {
+   "fieldname": "alert_on_exit",
+   "fieldtype": "Check",
+   "label": "Alert On Exit"
+  },
+  {
+   "fieldname": "prohibited",
+   "fieldtype": "Check",
+   "label": "Prohibited"
+  },
+  {
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-09-14 10:00:00",
+ "modified_by": "Administrator",
+ "module": "CIT Telematics",
+ "name": "Geofence",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CIT Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "CIT Control Room",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1,
+   "email": 1,
+   "export": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CIT Auditor",
+   "read": 1,
+   "print": 1,
+   "export": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "quick_entry": 0,
+ "autoname": "field:geofence_name"
+}
